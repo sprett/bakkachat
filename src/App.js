@@ -27,7 +27,7 @@ const [user] = useAuthState(auth);
   return (
     <div className="App">
       <header>
-        <h1>BakkaChat</h1>
+        <h1>📲 BakkaChat</h1>
         <SignOut />
       </header>
       <section>
@@ -59,7 +59,7 @@ function ChatRoom() {
   const dummy = useRef()
 
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt').limit();
 
   const [messages] = useCollectionData(query);
 
