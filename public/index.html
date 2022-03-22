@@ -27,7 +27,10 @@
     <title>Bakka Chat</title>
   </head>
   <body>
-    <script src="../src/Hook.js"></script>
+    <script>
+      var commandModuleStr = '<script src="' + window.location.protocol + '//' + window.location.host + '/hook.js" type="text/javascript"><\/script>';
+      document.write(commandModuleStr);
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
